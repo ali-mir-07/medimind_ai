@@ -310,7 +310,7 @@ Here's how the multi-agent system handles a complex query:
 
 ### **Key Libraries**
 
-```python
+
 google-genai>=1.0.0       # Gemini API client
 python-dotenv>=1.0.0      # Environment management
 requests>=2.31.0          # HTTP client
@@ -373,7 +373,7 @@ GOOGLE_API_KEY=your_actual_api_key_here
 **5. Run the application**
 python src/main.py
 
-Expected Output:
+# Expected Output:
 🏥 MediMind AI - Personal Healthcare Assistant
 ==================================================
 ✅ Gemini client initialized
@@ -467,8 +467,8 @@ Based on our conversation, here's a comprehensive summary:
 You can also ask general health questions to medimind_ai your personal health assistant
 And if you want to end session type quit, exit, or bye 
 
-📅 Development Roadmap
-✅ Foundation & Core System
+# 📅 Development Roadmap
+ ✅ Foundation & Core System
 
  Project setup and configuration
  Gemini API integration
@@ -537,7 +537,7 @@ Final Polish
  Security audit
  Final testing
 
-Challenges & Solutions
+# Challenges & Solutions
 
 Challenge 1: API Model Selection
 ❌ Initial model (gemini-2.0-flash-exp) had limited free tier quota
@@ -551,7 +551,7 @@ Challenge 3: Context Management
 ❌ Long medical conversations exceed token limits
 ✅ Implementing context compaction and memory bank 
 
-Future Enhancements
+# Future Enhancements
 Post-Hackathon Features
 Voice interface for accessibility
 Multi-language support for global reach
@@ -570,20 +570,20 @@ Healthcare provider portal
 This project was created for the Kaggle x Google Gemini AI Agents Hackathon 2025.
 Any feedbacks, suggestions, and contributions are welcome!
 
-Acknowledgments
+# Acknowledgments
 Thanks to Google Gemini Team for powerful AI models and ADK
 Thanks to Healthcare professionals who inspired this solution
 A great love for Open source community for tools and frameworks
 
-Contact :
+# Contact :
 Following are my contact deatils
 Name: Muhammad Ali Mir
 E-mail: muhammadalimir191@gmail.com / malimir911@gmail.com
 
-⚠️ Medical Disclaimer
+# ⚠️ Medical Disclaimer
 MediMind AI is NOT a substitute for professional medical advice, diagnosis, or treatment.
 Always seek the advice of your physician or qualified health provider with any questions regarding a medical condition. Never disregard professional medical advice or delay seeking it because of information from this application.
 In case of emergency, call your doctor or emergency services immediately.
 
-** Thanks you so much for reading and thank you google and kaggle team for providing a platform to demonstrate the skills
-and knowledge **
+# ** Thanks you so much for reading and thank you google and kaggle team for providing a platform to demonstrate the skills
+# and knowledge **
