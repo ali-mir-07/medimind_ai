@@ -467,123 +467,171 @@ Based on our conversation, here's a comprehensive summary:
 You can also ask general health questions to medimind_ai your personal health assistant
 And if you want to end session type quit, exit, or bye 
 
-# 📅 Development Roadmap
- ✅ Foundation & Core System
+<details>
+<summary><b>📅 Development Roadmap & Project Details</b> (Click to expand)</summary>
 
- Project setup and configuration
- Gemini API integration
- Base agent architecture
- Orchestrator agent with intent classification
-Specialized Agents
+<br>
 
- Symptom Analyzer agent
- Medication Manager agent
- Doctor Prep agent
- Agent coordination and routing
-Data & Intelligence
+## 📅 Development Roadmap
 
- Symptom knowledge database
- Medication information database
- Drug interaction checker
- Emergency detection system
-Memory & State
+### ✅ Completed Features
 
- Session management
- Conversation history tracking
- Memory Bank for long-term storage
- Context compaction
-Developer Experience
+**Foundation & Core System**
+- ✅ Project setup and configuration
+- ✅ Gemini API integration
+- ✅ Base agent architecture
+- ✅ Orchestrator agent with intent classification
 
- Modular architecture
- Comprehensive documentation
- Error handling and logging
- Configuration management
-🚧 Under Development
-Observability & Monitoring
+**Specialized Agents**
+- ✅ Symptom Analyzer agent
+- ✅ Medication Manager agent
+- ✅ Doctor Prep agent
+- ✅ Agent coordination and routing
 
- Enhanced logging system
- Performance metrics
- Agent interaction tracing
- Monitoring dashboard
-Advanced Features
+**Data & Intelligence**
+- ✅ Symptom knowledge database
+- ✅ Medication information database
+- ✅ Drug interaction checker
+- ✅ Emergency detection system
 
- Google Search tool integration
- Agent evaluation framework
- Advanced context engineering
- Response quality metrics
-Testing & Quality
+**Memory & State**
+- ✅ Session management
+- ✅ Conversation history tracking
+- ✅ Memory Bank for long-term storage
+- ✅ Context compaction
 
- Unit tests for agents
- Integration tests
- Performance testing
- Error scenario testing
-📅 Planned 
-Deployment & Production
+**Developer Experience**
+- ✅ Modular architecture
+- ✅ Comprehensive documentation
+- ✅ Error handling and logging
+- ✅ Configuration management
 
- Google Cloud Run deployment
- Production configuration
- Scalability testing
- Deployment documentation
-Documentation & Presentation
+---
 
- Demo short video
- Architecture diagrams
- API documentation
- User guide
-Final Polish
+### 🚧 Under Development
 
- Code review and cleanup
- Performance optimizations
- Security audit
- Final testing
+**Observability & Monitoring**
+- 🚧 Enhanced logging system
+- 🚧 Performance metrics
+- 🚧 Agent interaction tracing
+- 🚧 Monitoring dashboard
 
-# Challenges & Solutions
+**Advanced Features**
+- 🚧 Google Search tool integration
+- 🚧 Agent evaluation framework
+- 🚧 Advanced context engineering
+- 🚧 Response quality metrics
 
-Challenge 1: API Model Selection
-❌ Initial model (gemini-2.0-flash-exp) had limited free tier quota
-✅ Switched to gemini-flash-latest with better free tier limits
+**Testing & Quality**
+- 🚧 Unit tests for agents
+- 🚧 Integration tests
+- 🚧 Performance testing
+- 🚧 Error scenario testing
 
-Challenge 2: Medical Safety
-❌ Risk of providing harmful medical advice
-✅ Implemented strict safety protocols, disclaimers, and emergency detection
+---
 
-Challenge 3: Context Management
-❌ Long medical conversations exceed token limits
-✅ Implementing context compaction and memory bank 
+### 📅 Planned
 
-# Future Enhancements
-Post-Hackathon Features
-Voice interface for accessibility
-Multi-language support for global reach
-Integration with wearable health devices
-Mobile app (iOS/Android)
-Push notifications for medication reminders
-Export health summaries to PDF
+**Deployment & Production**
+- 📅 Google Cloud Run deployment
+- 📅 Production configuration
+- 📅 Scalability testing
+- 📅 Deployment documentation
 
-Long-term Vision
-Integration with Electronic Health Records (EHR)
-Telemedicine appointment booking
-AI-powered health insights and trend analysis
-Family health management dashboard
-Healthcare provider portal
+**Documentation & Presentation**
+- 📅 Demo short video
+- 📅 Architecture diagrams
+- 📅 API documentation
+- 📅 User guide
 
-This project was created for the Kaggle x Google Gemini AI Agents Hackathon 2025.
-Any feedbacks, suggestions, and contributions are welcome!
+**Final Polish**
+- 📅 Code review and cleanup
+- 📅 Performance optimizations
+- 📅 Security audit
+- 📅 Final testing
 
-# Acknowledgments
-Thanks to Google Gemini Team for powerful AI models and ADK
-Thanks to Healthcare professionals who inspired this solution
-A great love for Open source community for tools and frameworks
+---
 
-# Contact :
-Following are my contact deatils
-Name: Muhammad Ali Mir
-E-mail: muhammadalimir191@gmail.com / malimir911@gmail.com
+## 🛠️ Challenges & Solutions
 
-# ⚠️ Medical Disclaimer
-MediMind AI is NOT a substitute for professional medical advice, diagnosis, or treatment.
-Always seek the advice of your physician or qualified health provider with any questions regarding a medical condition. Never disregard professional medical advice or delay seeking it because of information from this application.
-In case of emergency, call your doctor or emergency services immediately.
+**Challenge 1: API Model Selection**
+- ❌ Initial model (`gemini-2.0-flash-exp`) had limited free tier quota
+- ✅ Switched to `gemini-flash-latest` with better free tier limits
 
-# ** Thanks you so much for reading and thank you google and kaggle team for providing a platform to demonstrate the skills
-# and knowledge **
+**Challenge 2: Medical Safety**
+- ❌ Risk of providing harmful medical advice
+- ✅ Implemented strict safety protocols, disclaimers, and emergency detection
+
+**Challenge 3: Context Management**
+- ❌ Long medical conversations exceed token limits
+- ✅ Implemented context compaction and memory bank
+
+---
+
+## 🔮 Future Enhancements
+
+**Post-Hackathon Features**
+- Voice interface for accessibility
+- Multi-language support for global reach
+- Integration with wearable health devices
+- Mobile app (iOS/Android)
+- Push notifications for medication reminders
+- Export health summaries to PDF
+
+**Long-term Vision**
+- Integration with Electronic Health Records (EHR)
+- Telemedicine appointment booking
+- AI-powered health insights and trend analysis
+- Family health management dashboard
+- Healthcare provider portal
+
+</details>
+
+---
+
+## 🙏 Acknowledgments
+
+**Special Thanks To:**
+- **Google Gemini Team** for providing powerful AI models and the AI Development Kit
+- **Healthcare Professionals** who inspired this solution with their invaluable insights
+- **Open Source Community** for the amazing tools and frameworks that made this possible
+- **Kaggle & Google** for hosting this incredible hackathon and providing a platform to showcase innovation
+
+---
+
+## 📧 Contact
+
+**Developer:** Muhammad Ali Mir  
+**Email:** muhammadalimir191@gmail.com | malimir911@gmail.com  
+**GitHub:** [@ali-mir-07](https://github.com/ali-mir-07)  
+**Project:** [MediMind AI](https://github.com/ali-mir-07/medimind_ai)
+
+---
+
+## ⚠️ Medical Disclaimer
+
+**MediMind AI is NOT a substitute for professional medical advice, diagnosis, or treatment.**
+
+- ✅ Always seek the advice of your physician or qualified health provider with any questions regarding a medical condition
+- ✅ Never disregard professional medical advice or delay seeking it because of information from this application
+- ✅ In case of emergency, call your doctor or emergency services immediately
+
+**This tool is designed to help organize health information, NOT to replace professional medical care.**
+
+---
+
+<div align="center">
+
+### 💙 Thank You for Visiting! 💙
+
+**Special thanks to Google and Kaggle for providing this platform to demonstrate skills and innovation.**
+
+**Built with ❤️ for Better Healthcare Accessibility**
+
+⭐ **If you found this project helpful, please give it a star!** ⭐
+
+---
+
+**Powered by** [Google Gemini](https://ai.google.dev/) | **Built with** [Python](https://www.python.org/) | **Hackathon:** Kaggle x Google 2025
+
+</div>
