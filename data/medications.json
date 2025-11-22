@@ -1,0 +1,25 @@
+{
+  "common_medications": [
+    {
+      "name": "aspirin",
+      "type": "NSAID",
+      "common_uses": ["pain relief", "fever reduction", "heart health"],
+      "typical_dosage": "75-325mg daily",
+      "warnings": ["stomach bleeding risk", "not for children with viral infections"]
+    },
+    {
+      "name": "ibuprofen",
+      "type": "NSAID",
+      "common_uses": ["pain relief", "fever reduction", "inflammation"],
+      "typical_dosage": "200-400mg every 4-6 hours",
+      "warnings": ["stomach bleeding risk", "kidney problems with long-term use"]
+    },
+    {
+      "name": "acetaminophen",
+      "type": "pain reliever",
+      "common_uses": ["pain relief", "fever reduction"],
+      "typical_dosage": "500-1000mg every 4-6 hours",
+      "warnings": ["liver damage with overdose", "max 3000-4000mg per day"]
+    }
+  ]
+}

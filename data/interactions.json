@@ -1,0 +1,18 @@
+{
+  "drug_interactions": [
+    {
+      "drug1": "aspirin",
+      "drug2": "ibuprofen",
+      "severity": "moderate",
+      "description": "Both are NSAIDs. Taking together increases risk of stomach bleeding and ulcers.",
+      "recommendation": "Avoid taking together. Space doses at least 8 hours apart if both are needed. Consult your doctor."
+    },
+    {
+      "drug1": "aspirin",
+      "drug2": "warfarin",
+      "severity": "severe",
+      "description": "Both thin the blood. Combination significantly increases bleeding risk.",
+      "recommendation": "DO NOT combine without doctor supervision. Requires close monitoring."
+    }
+  ]
+}
