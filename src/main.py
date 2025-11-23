@@ -5,11 +5,13 @@ Multi-Agent Implementation
 """
 
 import sys
-from typing import Dict, Any  # ← ADD THIS LINE
+import time  
+from typing import Dict, Any
 from src.agents.orchestrator import OrchestratorAgent
 from src.memory.session_manager import SessionManager
 from src.memory.memory_bank import MemoryBank
 from src.utils.logger import get_logger
+from src.utils.metrics import metrics_tracker 
 from src.config import Config
 
 logger = get_logger(__name__)
@@ -52,14 +54,30 @@ class MediMindAI:
                 
                 # Get current context
                 context = self.session_manager.get_context()
-                
-                # Process through orchestrator
+
+                # Process through orchestrator with timing
+                start_time = time.time()
                 result = self.orchestrator.process(user_input, context)
-                
+
+                # Track performance metrics
+                response_time = time.time() - start_time
+                agent_name = result.get("agent", "Unknown")
+
+                # Normalize agent name for metrics tracking
+                agent_key = agent_name.lower().replace(" ", "_")
+                if agent_key not in ["orchestrator", "symptom_analyzer", "medication_manager", "doctor_prep"]:
+                    agent_key = "orchestrator"  # Default to orchestrator
+                metrics_tracker.track_request(agent_key, response_time)
+
+                # Track special events
+                if result.get("is_emergency"):
+                    metrics_tracker.track_emergency()
+                if result.get("interactions_found"):
+                    metrics_tracker.track_interaction_check()
+
                 # Extract response
                 response = result.get("response", "I apologize, I couldn't process that.")
-                agent_name = result.get("agent", "Unknown")
-                
+                                
                 # Update context based on result
                 self._update_context(result)
                 
@@ -77,6 +95,7 @@ class MediMindAI:
                 self._handle_exit()
                 break
             except Exception as e:
+                metrics_tracker.track_error(str(e))
                 logger.error(f"Error in main loop: {str(e)}")
                 print(f"\n❌ An error occurred: {str(e)}")
                 print("Please try again or type 'quit' to exit.")
@@ -111,6 +130,10 @@ class MediMindAI:
         self.memory_bank.save_session(session_data)
         
         print("✅ Session saved!")
+
+        # Display metrics summary  
+        metrics_tracker.print_summary()
+
         print("\n👋 Take care of your health! Goodbye!")
         logger.info("Application exited normally")
 

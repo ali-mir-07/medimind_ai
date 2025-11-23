@@ -166,7 +166,6 @@ Agents don't just follow scripts - they reason about your situation:
 
 ## 🏗️ Architecture
 
-### **Multi-Agent System Overview**
 
 ### **Multi-Agent System Overview**
                 ┌─────────────────┐
@@ -239,7 +238,7 @@ Here's how the multi-agent system handles a complex query:
 
 ## ✨ Features
 
-### **✅ Implemented**
+### ✅ Implemented 
 
 **Multi-Agent System**
 - ✅ Orchestrator agent with intelligent intent classification
@@ -266,33 +265,27 @@ Here's how the multi-agent system handles a complex query:
 - ✅ Drug interaction checker
 - ✅ Structured logging and tracing
 
+**Observability & Testing** 
+- ✅ Performance metrics tracking system
+- ✅ Response time monitoring
+- ✅ Agent activity analytics
+- ✅ Automated test suite (7 tests, 100% pass rate)
+- ✅ Session metrics dashboard
+- ✅ Error tracking and reporting
+
 **Developer Experience**
 - ✅ Clean, modular architecture
 - ✅ Comprehensive code documentation
 - ✅ Type hints and validation
 - ✅ Error handling and logging
+- ✅ Comprehensive testing framework
 
-### **🚧 In Development **
+### 🚧 In Development
 
-**Enhanced Observability**
-- 🚧 Performance metrics dashboard
-- 🚧 Agent interaction visualization
-- 🚧 Real-time monitoring
-
-**Advanced Features**
-- 🚧 Google Search integration for medical research
-- 🚧 Agent evaluation framework
-- 🚧 Advanced context engineering
-
-**Deployment**
-- 🚧 Cloud deployment (Google Cloud Run)
-- 🚧 Production-ready configuration
-- 🚧 Scalability optimizations
-
-**Documentation**
+**Final Polish**
 - 🚧 Demo video (3-minute walkthrough)
-- 🚧 Architecture diagrams
-- 🚧 API documentation
+- 🚧 Architecture diagrams and visuals
+- 🚧 Advanced error recovery mechanisms
 
 ---
 
@@ -317,17 +310,18 @@ requests>=2.31.0          # HTTP client
 pydantic>=2.0.0           # Data validation
 typing-extensions>=4.5.0  # Type hints
 
-### **Hackathon Requirements Met**
+### Hackathon Requirements Met
 
-1. ✅ **Multi-agent system**  (Orchestrator + specialized agents)
-2. ✅ **Tools**               (MCP, custom tools, Google Search)
-3. ✅ **Sessions & Memory**   (InMemorySessionService + Memory Bank)
-4. ✅ **Context Engineering** (Context compaction)
-5. ✅ **Observability**       (Logging, tracing, metrics)
-6. ⚙️ **Agent Deployment**    (Cloud Run)
-
-*✅ = Implemented | ⚙️ = In Progress*
-
+| Requirement | Implementation | Status |
+|-------------|---------------|--------|
+| **Multi-agent system** | Orchestrator + 3 specialized agents | ✅ Complete |
+| **Tools** | Custom medication checker, symptom DB | ✅ Complete |
+| **Sessions & Memory** | Session manager + Memory Bank | ✅ Complete |
+| **Context Engineering** | Context compaction algorithm | ✅ Complete |
+| **Observability** | Structured logging, metrics, tracing | ✅ Complete |
+| **Gemini Usage** | Powered by Gemini Flash Latest | ✅ Complete |
+| **Agent Evaluation** | Automated test suite (100% pass) | ✅ Complete |
+| **Agent Deployment** | Cloud Run deployment planned | Optional  |
 ---
 
 ## 🚀 Setup Instructions
@@ -346,35 +340,44 @@ git clone https://github.com/ali-mir-07/medimind_ai.git
 cd medimind-ai
 
 **2. Create virtual environment**
-# Create virtual environment
+
+```bash
 python -m venv .venv
-
-# Activate (Windows)
+```
+### Activate (Windows)
+```
 .venv\Scripts\activate
-
-# Activate (Mac/Linux)
+```
+### Activate (Mac/Linux)
+```
 source .venv/bin/activate
-
+```
 **3. Insatll Dependencies**
+```bash
 pip install -r requirements.txt
+```
 
 **4. Configure environment variables**
-# Copy example file
+### Copy example file
+```
 copy .env.example .env  # Windows
 # cp .env.example .env  # Mac/Linux
-
-# Edit .env and add your API key
+```
+### Edit .env and add your API key
+```
 notepad .env  # Windows
-# nano .env   # Mac/Linux
-
-Add your Gemini API key:
+### nano .env   # Mac/Linux
+```
+### Add your Gemini API key:
 GOOGLE_API_KEY=your_actual_api_key_here
 
 **5. Run the application**
+```bash
 python src/main.py
+```
 
 # Expected Output:
-🏥 MediMind AI - Personal Healthcare Assistant
+## 🏥 MediMind AI - Personal Healthcare Assistant
 ==================================================
 ✅ Gemini client initialized
 ✅ Agent configuration created
@@ -467,6 +470,70 @@ Based on our conversation, here's a comprehensive summary:
 You can also ask general health questions to medimind_ai your personal health assistant
 And if you want to end session type quit, exit, or bye 
 
+---
+
+## 🧪 Testing
+
+MediMind AI includes a comprehensive automated test suite to ensure reliability and quality.
+
+### Running Tests
+
+```bash
+# Run the complete test suite
+python tests/test_agents.py
+```
+
+### 🧪 Test Coverage
+
+The test suite validates the following components:
+
+| Test Case | Description | Status |
+| :--- | :--- | :---: |
+| **Orchestrator Initialization** | Verifies all agents initialize correctly | ✅ Pass |
+| **Symptom Analysis** | Tests symptom analyzer routing and response | ✅ Pass |
+| **Medication Interaction** | Validates drug interaction detection | ✅ Pass |
+| **Doctor Prep** | Confirms appointment summary generation | ✅ Pass |
+| **Emergency Detection** | Tests emergency keyword escalation | ✅ Pass |
+| **Intent Classification** | Validates query routing accuracy | ✅ Pass |
+| **Session Management** | Tests memory and context tracking | ✅ Pass |
+
+### Current Test Results:
+
+- ✅ 7/7 tests passing
+- ✅ 100% success rate
+- ✅ All core features validated
+
+### Performance Metrics:
+--- 
+When you will quit the application, you'll see comprehensive session metrics:
+
+---
+
+============================================================
+📊 MEDIMIND AI - SESSION METRICS & PERFORMANCE
+============================================================
+
+⏱️  Session Duration: 0:01:43
+📈 Total Requests: 3
+✅ Success Rate: 100.0%
+
+⚡ Performance:
+  • Average Response Time: 3.25s
+  • Fastest Response: 1.12s
+  • Slowest Response: 5.15s
+
+🤖 Agent Activity:
+  • Orchestrator: 3 calls (100.0%)
+  • Symptom Analyzer: 1 calls (33.3%)
+  • Medication Manager: 1 calls (33.3%)
+  • Doctor Prep: 1 calls (33.3%)
+
+🛡️  Safety Metrics:
+  • Emergency Detections: 0
+  • Drug Interaction Checks: 1
+  • Errors: 0
+============================================================
+
 <details>
 <summary><b>📅 Development Roadmap & Project Details</b> (Click to expand)</summary>
 
@@ -506,53 +573,37 @@ And if you want to end session type quit, exit, or bye
 - ✅ Error handling and logging
 - ✅ Configuration management
 
+**Observability, Testing & Documentation**
+- ✅ Performance metrics tracking system
+- ✅ Response time monitoring
+- ✅ Agent activity analytics
+- ✅ Session metrics dashboard
+- ✅ Automated testing framework
+- ✅ 7 comprehensive tests (100% pass rate)
+- ✅ Test coverage for all agents
+- ✅ Emergency detection validation
+- ✅ Interaction checking validation
+- ✅ Technical documentation (WRITEUP.md)
+- ✅ Enhanced code quality and comments
 ---
 
-### 🚧 Under Development
-
-**Observability & Monitoring**
-- 🚧 Enhanced logging system
-- 🚧 Performance metrics
-- 🚧 Agent interaction tracing
-- 🚧 Monitoring dashboard
-
-**Advanced Features**
-- 🚧 Google Search tool integration
-- 🚧 Agent evaluation framework
-- 🚧 Advanced context engineering
-- 🚧 Response quality metrics
-
-**Testing & Quality**
-- 🚧 Unit tests for agents
-- 🚧 Integration tests
-- 🚧 Performance testing
-- 🚧 Error scenario testing
-
----
-
-### 📅 Planned
-
-**Deployment & Production**
-- 📅 Google Cloud Run deployment
-- 📅 Production configuration
-- 📅 Scalability testing
-- 📅 Deployment documentation
+### 🚧 Under Development and Optionals
 
 **Documentation & Presentation**
-- 📅 Demo short video
+- 📅 Demo video (3-minute walkthrough)
 - 📅 Architecture diagrams
-- 📅 API documentation
-- 📅 User guide
+- 📅 Screenshots and visuals
+- 📅 Final README polish
 
-**Final Polish**
-- 📅 Code review and cleanup
-- 📅 Performance optimizations
-- 📅 Security audit
-- 📅 Final testing
+**Possible Optional Enhancements**
+- 📅 Google Search tool integration
+- 📅 Agent deployment (Google Cloud Run)
+- 📅 Production configuration
+- 📅 Deployment documentation
 
----
 
-## 🛠️ Challenges & Solutions
+--- 
+## Challenges & Solutions
 
 **Challenge 1: API Model Selection**
 - ❌ Initial model (`gemini-2.0-flash-exp`) had limited free tier quota
@@ -565,6 +616,14 @@ And if you want to end session type quit, exit, or bye
 **Challenge 3: Context Management**
 - ❌ Long medical conversations exceed token limits
 - ✅ Implemented context compaction and memory bank
+
+**Challenge 4: Testing Multi-Agent Systems** 
+- ❌ Complex interactions between agents difficult to validate
+- ✅ Built comprehensive test suite with 7 automated tests covering all agent workflows
+
+**Challenge 5: Performance Monitoring** 
+- ❌ No visibility into system performance and agent activity
+- ✅ Implemented MetricsTracker with real-time performance analytics
 
 ---
 
@@ -605,6 +664,32 @@ And if you want to end session type quit, exit, or bye
 **Email:** muhammadalimir191@gmail.com | malimir911@gmail.com  
 **GitHub:** [@ali-mir-07](https://github.com/ali-mir-07)  
 **Project:** [MediMind AI](https://github.com/ali-mir-07/medimind_ai)
+
+
+
+---
+
+## 📚 Resources
+
+### Documentation
+- **README.md** - This file (Complete Project Deatails, User Guide and Setup)
+- **WRITEUP.md** - Comprehensive technical writeup for elvaluation
+- **Code Comments** - Inline documentation throughout codebase
+
+### Testing & Quality
+- **Test Suite** - Run `python tests/test_agents.py`
+- **Performance Metrics** - Displayed on application exit
+- **Logging** - Structured logs in console output
+
+### Data & Knowledge Bases
+- **symptoms.json** - Common symptoms with red flags
+- **medications.json** - Medication information database
+- **interactions.json** - Drug interaction warnings
+
+### External Links
+- **Gemini API** - https://ai.google.dev/
+- **ADK Python** - https://github.com/google/adk-python
+- **Hackathon** - Kaggle x Google Gemini AI Agents 2025
 
 ---
 
