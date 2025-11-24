@@ -168,37 +168,26 @@ Agents don't just follow scripts - they reason about your situation:
 
 
 ### **Multi-Agent System Overview**
-                ┌─────────────────┐
-                │   USER INPUT    │
-                └────────┬────────┘
-                         │
-                         ▼
-          ┌──────────────────────────┐
-          │  ORCHESTRATOR AGENT      │
-          │  (Gemini Flash Latest)   │
-          │  • Routes requests       │
-          │  • Maintains context     │
-          │  • Ensures safety        │
-          └──────┬──────────┬────────┘
-                 │          │
-     ┌───────────┼──────────┼───────────┐
-     │           │          │           │
-     ▼           ▼          ▼           ▼
-
-┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐
-│SYMPTOM │  │  MEDS  │  │DOCTOR  │  │ MEMORY │
-│ANALYZER│  │MANAGER │  │  PREP  │  │  BANK  │
-└────────┘  └────────┘  └────────┘  └────────┘
-     │           │          │           │
-     └───────────┴──────────┴───────────┘
-                 │
-                 ▼
-        ┌────────────────┐
-        │     TOOLS      │
-        │ • Google Search│
-        │ • Med Checker  │
-        │ • Symptom DB   │
-        └────────────────┘
+graph TD
+    A[👤 USER INPUT] --> B[🎯 ORCHESTRATOR AGENT<br/>Gemini Flash Latest<br/>• Routes requests<br/>• Maintains context<br/>• Ensures safety]
+    
+    B --> C[🩺 SYMPTOM<br/>ANALYZER]
+    B --> D[💊 MEDS<br/>MANAGER]
+    B --> E[👨‍⚕️ DOCTOR<br/>PREP]
+    B --> F[💾 MEMORY<br/>BANK]
+    
+    C --> G[🛠️ TOOLS<br/>• Google Search<br/>• Med Checker<br/>• Symptom DB]
+    D --> G
+    E --> G
+    F --> G
+    
+    style A fill:#4fc3f7,stroke:#01579b,stroke-width:3px,color:#000
+    style B fill:#ffb74d,stroke:#e65100,stroke-width:3px,color:#000
+    style C fill:#9e9e9e,stroke:#424242,stroke-width:2px,color:#fff
+    style D fill:#9e9e9e,stroke:#424242,stroke-width:2px,color:#fff
+    style E fill:#9e9e9e,stroke:#424242,stroke-width:2px,color:#fff
+    style F fill:#f06292,stroke:#880e4f,stroke-width:2px,color:#000
+    style G fill:#66bb6a,stroke:#1b5e20,stroke-width:3px,color:#000
 
 ## 🤖 Agent Interactions Example
 
