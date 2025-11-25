@@ -15,10 +15,10 @@
 - [The Problem](#-the-problem)
 - [Our Solution](#-our-solution)
 - [Why Agents?](#-why-agents)
-- [Architecture](#-architecture)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Setup Instructions](#-setup-instructions)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup Instructions](#setup-instructions)
 - [Usage Examples](#usage-examples)
 - [Development Roadmap](#-development-roadmap)
 - [Acknowledgments](#acknowledgments)
@@ -163,7 +163,7 @@ Agents don't just follow scripts - they reason about your situation:
 
 ---
 
-## Architecture
+## <a id="architecture"></a>🏗️ Architecture
 
 
 ### **Multi-Agent System Overview**
@@ -235,7 +235,7 @@ Here's how the multi-agent system handles a complex query:
 
 ---
 
-##  Features
+## <a id="features"></a>✨ Features
 
 ### ✅ Implemented 
 
@@ -288,7 +288,7 @@ Here's how the multi-agent system handles a complex query:
 
 ---
 
-##  Tech Stack
+## <a id="tech-stack"></a>💻 Tech Stack
 
 ### **Core Technologies**
 
@@ -324,7 +324,7 @@ typing-extensions>=4.5.0  # Type hints
 | **Agent Deployment** | Cloud Run deployment planned | Optional  |
 ---
 
-##  Setup Instructions
+## <a id="setup-instructions"></a>⚙️ Setup Instructions
 
 ### **Prerequisites**
 
