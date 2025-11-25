@@ -168,7 +168,6 @@ Agents don't just follow scripts - they reason about your situation:
 
 
 ### **Multi-Agent System Overview**
-
 ```mermaid
 graph TD
     A[👤 USER INPUT] --> B[🎯 ORCHESTRATOR AGENT<br/>Gemini Flash Latest<br/>• Routes requests<br/>• Maintains context<br/>• Ensures safety]
@@ -190,6 +189,15 @@ graph TD
     style E fill:#9e9e9e,stroke:#424242,stroke-width:2px,color:#fff
     style F fill:#f06292,stroke:#880e4f,stroke-width:2px,color:#000
     style G fill:#66bb6a,stroke:#1b5e20,stroke-width:3px,color:#000
+```
+
+**Agent Workflow:**
+
+1. **User Query** → Sent to Orchestrator
+2. **Orchestrator** → Classifies intent and routes to appropriate agent(s)
+3. **Specialized Agents** → Process query using their expertise
+4. **Tools** → Agents access databases and external resources
+5. **Response** → Aggregated and returned to user
 
 ---
 
