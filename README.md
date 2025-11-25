@@ -18,11 +18,10 @@
 - [Architecture](#-architecture)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Usage Examples](#-usage-examples)
+- [Setup Instructions](#-setup-instructions)
+- [Usage Examples](#usage-examples)
 - [Development Roadmap](#-development-roadmap)
-- [Project Structure](#-project-structure)
-- [Contributing](#-contributing)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -164,7 +163,7 @@ Agents don't just follow scripts - they reason about your situation:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 
 ### **Multi-Agent System Overview**
@@ -200,7 +199,6 @@ graph TD
 5. **Response** → Aggregated and returned to user
 
 ---
-
 ## 🤖 Agent Interactions Example
 
 Here's how the multi-agent system handles a complex query:
@@ -237,7 +235,7 @@ Here's how the multi-agent system handles a complex query:
 
 ---
 
-## ✨ Features
+##  Features
 
 ### ✅ Implemented 
 
@@ -290,7 +288,7 @@ Here's how the multi-agent system handles a complex query:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### **Core Technologies**
 
@@ -304,12 +302,13 @@ Here's how the multi-agent system handles a complex query:
 
 ### **Key Libraries**
 
-
+```python
 google-genai>=1.0.0       # Gemini API client
 python-dotenv>=1.0.0      # Environment management
 requests>=2.31.0          # HTTP client
 pydantic>=2.0.0           # Data validation
 typing-extensions>=4.5.0  # Type hints
+```
 
 ### Hackathon Requirements Met
 
@@ -325,7 +324,7 @@ typing-extensions>=4.5.0  # Type hints
 | **Agent Deployment** | Cloud Run deployment planned | Optional  |
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### **Prerequisites**
 
@@ -376,101 +375,142 @@ GOOGLE_API_KEY=your_actual_api_key_here
 ```bash
 python src/main.py
 ```
+### Expected Output
 
-# Expected Output:
-## 🏥 MediMind AI - Personal Healthcare Assistant
-==================================================
-✅ Gemini client initialized
-✅ Agent configuration created
+When you run the application, you'll see:
+
+```
+============================================================
+🏥 MediMind AI - Personal Healthcare Assistant
+============================================================
+✅ Multi-Agent System Active
+✅ Agents: Symptom Analyzer, Medication Manager, Doctor Prep
+✅ Memory Bank: Enabled
 
 Type 'quit' to exit
---------------------------------------------------
+------------------------------------------------------------
 
 👤 You:
+```
 
-Example Usage:
-Symptom Analysis:
-👤 You: I've had a severe headache for 2 days and feel nauseous
+---
 
-🤖 MediMind (SymptomAnalyzer): I understand you've been experiencing a 
-severe headache and nausea for 2 days. Let me ask some questions to 
-better understand your symptoms:
+## Usage Examples
 
-1. On a scale of 1-10, how severe is the headache right now?
+<details>
+<summary><b>📊 Example 1: Symptom Analysis</b> (Click to expand)</summary>
+
+<br>
+
+**User Input:**
+```
+I've had a severe headache for 2 days and feel nauseous
+```
+
+**MediMind Response:**
+```
+🤖 MediMind (SymptomAnalyzer): I understand you've been experiencing 
+a severe headache and nausea for 2 days. Let me ask some questions:
+
+1. On a scale of 1-10, how severe is the headache?
 2. Where is the pain located (temples, forehead, back of head)?
 3. Is the pain throbbing, dull, or sharp?
 4. Are you sensitive to light or sound?
 5. Have you taken any medication for this?
 
-Please note: If this is the worst headache you've ever experienced 
-or if it came on suddenly, please seek immediate medical attention.
+⚠️ If this is the worst headache you've ever experienced or came 
+on suddenly, please seek immediate medical attention.
+```
 
-Medication Interaction Check:
-👤 You: I take aspirin every morning for my heart. Can I also take 
-ibuprofen for back pain?
+</details>
 
-🤖 MediMind (MedicationManager): Thank you for checking before 
-combining medications. Here's what you should know:
+<details>
+<summary><b>💊 Example 2: Medication Interaction Check</b> (Click to expand)</summary>
+
+<br>
+
+**User Input:**
+```
+I take aspirin every morning for my heart. Can I also take ibuprofen for back pain?
+```
+
+**MediMind Response:**
+```
+🤖 MediMind (MedicationManager): Thank you for checking before combining medications.
 
 ⚠️ POTENTIAL INTERACTION DETECTED
 
-**Aspirin + Ibuprofen:**
-- Severity: MODERATE
-- Both are NSAIDs (non-steroidal anti-inflammatory drugs)
-- Taking together significantly increases risk of:
-  • Stomach bleeding and ulcers
-  • Reduced effectiveness of aspirin's heart protection
-  • Kidney problems with long-term use
+Aspirin + Ibuprofen:
+• Severity: MODERATE
+• Both are NSAIDs (non-steroidal anti-inflammatory drugs)
+• Risk: Stomach bleeding, ulcers, reduced aspirin effectiveness
 
-**Recommendation:**
-- DO NOT take these together without doctor approval
-- If you must take both, space them at least 8 hours apart
-- Consider acetaminophen (Tylenol) instead for pain relief
-- IMPORTANT: Consult your doctor or pharmacist before combining
+Recommendation:
+• DO NOT combine without doctor approval
+• Space doses 8+ hours apart if necessary
+• Consider acetaminophen (Tylenol) as alternative
+• Consult your healthcare provider before combining
+```
 
-Your safety is important. Please discuss this with your healthcare 
-provider, especially since you're taking aspirin for heart health.
+</details>
 
-Doctor Visit Prepration:
-👤 You: I have a doctor appointment tomorrow. Can you help me prepare?
+<details>
+<summary><b>👨‍⚕️ Example 3: Doctor Visit Preparation</b> (Click to expand)</summary>
 
-🤖 MediMind (DoctorPrep): I'll help you prepare for your appointment! 
-Based on our conversation, here's a comprehensive summary:
+<br>
 
-**SYMPTOMS SUMMARY**
-• Severe headache (Duration: 2 days, Severity: Not yet specified)
+**User Input:**
+```
+I have a doctor appointment tomorrow. Can you help me prepare?
+```
+
+**MediMind Response:**
+```
+🤖 MediMind (DoctorPrep): I'll help you prepare for your appointment!
+
+📋 SYMPTOMS SUMMARY
+• Severe headache (Duration: 2 days)
 • Nausea (Associated with headache)
-• Back pain (Reason for medication question)
+• Back pain
 
-**CURRENT MEDICATIONS**
+💊 CURRENT MEDICATIONS
 • Aspirin (daily, for heart health)
 
-**CONCERNS & QUESTIONS TO ASK YOUR DOCTOR**
+❓ QUESTIONS TO ASK YOUR DOCTOR
 
 1. Headache & Nausea:
-   - "I've had a severe headache with nausea for 2 days. What could 
-     be causing this?"
-   - "Are there any tests we should run to rule out serious causes?"
+   - "What could be causing this 2-day headache with nausea?"
+   - "Should we run any tests to rule out serious causes?"
    - "What treatment do you recommend?"
 
-2. Medication for Back Pain:
-   - "I have back pain but I'm taking daily aspirin. What pain reliever 
-     is safe for me to use?"
-   - "Are there any non-medication approaches I should try first?"
+2. Back Pain & Medications:
+   - "What pain reliever is safe with my daily aspirin?"
+   - "Should I try non-medication approaches first?"
 
 3. General Health:
-   - "How is my current medication (aspirin) working for my heart health?"
-   - "Are there any lifestyle changes I should make?"
+   - "How is my aspirin working for heart health?"
+   - "Any lifestyle changes I should make?"
 
-**TIMELINE**
+📅 TIMELINE
 • 2 days ago: Headache and nausea began
-• Today: Experiencing back pain, sought medication advice
+• Today: Back pain, seeking medication advice
 
-💡 Tip: Print or screenshot this summary to bring to your appointment!
+💡 Tip: Print or screenshot this to bring to your appointment!
+```
 
-You can also ask general health questions to medimind_ai your personal health assistant
-And if you want to end session type quit, exit, or bye 
+</details>
 
+---
+
+### Commands
+
+**To use MediMind AI:**
+- Ask health questions naturally
+- Get symptom analysis and medication guidance
+- Prepare for doctor visits
+
+**To exit:**
+- Type `quit`, `exit`, or `bye`
 ---
 
 ## 🧪 Testing
@@ -504,12 +544,11 @@ The test suite validates the following components:
 - ✅ 100% success rate
 - ✅ All core features validated
 
-### Performance Metrics:
---- 
-When you will quit the application, you'll see comprehensive session metrics:
+### Performance Metrics
 
----
+When you exit the application, you'll see comprehensive session metrics:
 
+```
 ============================================================
 📊 MEDIMIND AI - SESSION METRICS & PERFORMANCE
 ============================================================
@@ -534,6 +573,19 @@ When you will quit the application, you'll see comprehensive session metrics:
   • Drug Interaction Checks: 1
   • Errors: 0
 ============================================================
+```
+
+**Metrics Explained:**
+
+| Metric | Description |
+|--------|-------------|
+| **Session Duration** | Total time the application was running |
+| **Total Requests** | Number of queries processed |
+| **Success Rate** | Percentage of requests handled without errors |
+| **Response Time** | Time taken to generate responses (average/min/max) |
+| **Agent Activity** | Which agents were used and how often |
+| **Safety Metrics** | Emergency detections and interaction checks performed |
+
 
 <details>
 <summary><b>📅 Development Roadmap & Project Details</b> (Click to expand)</summary>
@@ -586,45 +638,21 @@ When you will quit the application, you'll see comprehensive session metrics:
 - ✅ Interaction checking validation
 - ✅ Technical documentation (WRITEUP.md)
 - ✅ Enhanced code quality and comments
----
-
-### 🚧 Under Development and Optionals
 
 **Documentation & Presentation**
-- 📅 Demo video (3-minute walkthrough)
-- 📅 Architecture diagrams
-- 📅 Screenshots and visuals
-- 📅 Final README polish
+- ✅ Architecture diagrams
+- ✅ Screenshots and visuals
+- ✅ Final README polish
+
+---
+
+### 🚧 Possible Optional Development
 
 **Possible Optional Enhancements**
 - 📅 Google Search tool integration
 - 📅 Agent deployment (Google Cloud Run)
 - 📅 Production configuration
 - 📅 Deployment documentation
-
-
---- 
-## Challenges & Solutions
-
-**Challenge 1: API Model Selection**
-- ❌ Initial model (`gemini-2.0-flash-exp`) had limited free tier quota
-- ✅ Switched to `gemini-flash-latest` with better free tier limits
-
-**Challenge 2: Medical Safety**
-- ❌ Risk of providing harmful medical advice
-- ✅ Implemented strict safety protocols, disclaimers, and emergency detection
-
-**Challenge 3: Context Management**
-- ❌ Long medical conversations exceed token limits
-- ✅ Implemented context compaction and memory bank
-
-**Challenge 4: Testing Multi-Agent Systems** 
-- ❌ Complex interactions between agents difficult to validate
-- ✅ Built comprehensive test suite with 7 automated tests covering all agent workflows
-
-**Challenge 5: Performance Monitoring** 
-- ❌ No visibility into system performance and agent activity
-- ✅ Implemented MetricsTracker with real-time performance analytics
 
 ---
 
@@ -649,7 +677,18 @@ When you will quit the application, you'll see comprehensive session metrics:
 
 ---
 
-## 🙏 Acknowledgments
+## 🧩 Challenges & Solutions
+
+| Challenge | Problem | Solution |
+|-----------|---------|----------|
+| **API Model Selection** | Initial model (`gemini-2.0-flash-exp`) had limited free tier quota | Switched to `gemini-flash-latest` with better free tier limits |
+| **Medical Safety** | Risk of providing harmful medical advice | Implemented strict safety protocols, disclaimers, and emergency detection |
+| **Context Management** | Long medical conversations exceed token limits | Implemented context compaction and memory bank |
+| **Testing Multi-Agent Systems** | Complex interactions between agents difficult to validate | Built comprehensive test suite with 7 automated tests covering all agent workflows |
+| **Performance Monitoring** | No visibility into system performance and agent activity | Implemented MetricsTracker with real-time performance analytics |
+---
+
+## Acknowledgments
 
 **Special Thanks To:**
 - **Google Gemini Team** for providing powerful AI models and the AI Development Kit
