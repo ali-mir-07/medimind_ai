@@ -142,6 +142,7 @@ MediMind AI addresses these challenges through an innovative **multi-agent archi
 
 MediMind AI employs a **hierarchical multi-agent architecture** inspired by how real medical teams operate:
 
+```mermaid
 graph TD
     A[👤 USER QUERY<br/>I have a headache, I take aspirin<br/>Can I also take ibuprofen?] --> B[🎯 ORCHESTRATOR AGENT<br/>Gemini Flash Latest]
     
@@ -177,7 +178,7 @@ graph TD
     style E fill:#9e9e9e,stroke:#424242,stroke-width:2px,color:#000
     style F fill:#66bb6a,stroke:#1b5e20,stroke-width:2px,color:#000
     style G fill:#f06292,stroke:#880e4f,stroke-width:2px,color:#000
-
+```
 **How the system processes the example query:**
 
 1. **User Input** → "I have a headache, I take aspirin. Can I also take ibuprofen?"
